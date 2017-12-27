@@ -296,7 +296,7 @@ public:
 		pCurrentVideo(NULL),
 		pCurrentSubtitle(NULL),
 		pErrorMessage(NULL),
-		mMessageMain(eApp, 1),
+		mMessageMain(eApp, 1, "eServiceApp"),
 		mMessageThread(this, 1),
 		mTimerDelay(100), // updated play position timer
 		mWaitForUpdate(false),
