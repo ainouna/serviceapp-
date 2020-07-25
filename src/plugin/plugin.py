@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+from __future__ import print_function
 import os
 import json
 
@@ -348,28 +351,28 @@ class ServiceAppDetectPlayers(Screen):
         GSTPLAYER_VERSION = None
         jsondata = self._get_first_json_data_from_string(data)
         if jsondata is None:
-            print "[ServiceApp] cannot detect gstplayer version(1)!"
+            print("[ServiceApp] cannot detect gstplayer version(1)!")
             return
         try:
             GSTPLAYER_VERSION = jsondata["GSTPLAYER_EXTENDED"]["version"]
         except KeyError:
-            print "[ServiceApp] cannot detect gstplayer version(2)!"
+            print("[ServiceApp] cannot detect gstplayer version(2)!")
         else:
-            print "[ServiceApp] found gstplayer - %d version" % GSTPLAYER_VERSION
+            print("[ServiceApp] found gstplayer - %d version" % GSTPLAYER_VERSION)
 
     def detect_exteplayer3(self, data, retval, extra_args):
         global EXTEPLAYER3_VERSION
         EXTEPLAYER3_VERSION = None
         jsondata = self._get_first_json_data_from_string(data)
         if jsondata is None:
-            print "[ServiceApp] cannot detect exteplayer3 version(1)!"
+            print("[ServiceApp] cannot detect exteplayer3 version(1)!")
             return
         try:
             EXTEPLAYER3_VERSION = jsondata["EPLAYER3_EXTENDED"]["version"]
         except KeyError:
-            print "[ServiceApp] cannot detect exteplayer3 version(2)!"
+            print("[ServiceApp] cannot detect exteplayer3 version(2)!")
         else:
-            print "[ServiceApp] found exteplayer3 - %d version" % EXTEPLAYER3_VERSION
+            print("[ServiceApp] found exteplayer3 - %d version" % EXTEPLAYER3_VERSION)
 
 
 def main(session, **kwargs):
