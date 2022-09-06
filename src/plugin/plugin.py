@@ -305,7 +305,7 @@ class ServiceAppPlayer(MoviePlayer):
 class ServiceAppDetectPlayers(Screen):
     skin = """
         <screen position="center,center" size="500,340" title="ServiceApp - player check">
-            <widget name="text" position="10,10" size="490,325" font="Regular;28" halign="center" valign="center" />
+            <widget name="text" position="10,10" size="490,325" font="Regular;28" horizontalAlignment="center" verticalAlignment="center" />
         </screen>
                 """
 
